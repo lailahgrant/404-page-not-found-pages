@@ -44,8 +44,6 @@
 > color : #4e72a9 ;  rgb(78,114,169)
 
 
-
-
 `404 page 4️⃣`
 <img src="./assets/not-found-4.jpg" alt="404 page not found" />
 
