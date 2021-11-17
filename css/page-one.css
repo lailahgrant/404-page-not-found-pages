@@ -7,12 +7,12 @@
 }
 
 body{
-    font-family: "Raleway", "Oswald";
+    font-family: "Raleway", "Oswald","Viga";
     background-color: #19345e;
 }
 
 .container{
-    background-color: azure;
+    background-color: white;
     margin:2rem auto;
     height:90vh;
     width:80%;
@@ -58,6 +58,7 @@ nav{
     /* add transform-origin: top; to hve transition start at the top, humberger */
     transform-origin: top;
     transition: transform 400ms ease-in-out;
+    
 }
 
 nav ul {
@@ -71,6 +72,9 @@ nav li{ /* add spacing between each li*/
 
 nav a{
     /* font-size, color, text-decoration, text-transform */
+    /* opacity:0; - links disappear */
+    opacity:0;
+    transition:opacity 250ms ease-in-out;
 }
 
 nav a:hover{
@@ -86,6 +90,12 @@ nav a:hover{
     
     /* display is commented to add transitions */
     transform: scale(1,1); /*displays the nav on hamburger click*/
+}
+
+/* make links fade in as transition finishes */
+.nav-hamburger:checked ~ nav a {
+    opacity: 1;
+    transition:opacity 250ms ease-in-out 250ms;
 }
 
 /* to hide the checkbox */
@@ -142,6 +152,54 @@ nav a:hover{
 }
 
 
+/* make for big screen */
+@media screen and (min-width:800px) {
+    .nav-toggle-label{
+        display:none;
+    }
+
+    header{
+        display:grid;
+        /* 4 columns */
+        grid-template-columns: 1fr auto minmax(200px,3fr)  1fr;
+    }
+
+    .logo{
+        grid-column: 1 / 2;
+    }
+
+    nav{
+        /* take of all syles on nav */
+        all: unset;
+        grid-column: 3 / 4;
+        /* put navigation in center (step is after nav ul css) */
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav a{
+        opacity:1; /*to display th links*/
+    }
+
+    nav ul {
+        display:flex;
+        justify-content: flex-end; /*to put them on the right*/
+        /* border: 1px solid red; */
+    }
+
+    nav li {
+        margin-left: 3rem;
+        margin-bottom: 0;
+    }
+
+    main h1{
+        font-size:9rem;
+    }
+
+}
+
+
 
 
 /* content */
@@ -150,12 +208,35 @@ main{
     place-items: center;
     /* height:100vh */
     text-align: center;
-    padding-top: 15rem;
+    padding-top: 10rem;
+    gap:2rem;
 } 
 
+main h1{
+    font-size: 15rem;
+    font-family: "Raleway" ;
+    /* 
+    * Make text transparent with text border
+    */
+    /* background: #fff; */
+    -webkit-text-fill-color:transparent;
+    /* -webkit-background-clip: text; */
+    -webkit-text-stroke:2px #4e72a9;
+    /* text-shadow: 1px 0 0 #19345e, 0 -1px 0 #19345e, 0 1px 0 #19345e, -1px 0 0 #19345e; */
+}
 
+main p{
+    font-size: 1.5rem;
+    color: #19345e;
+    
+}
 
-
+main a{
+    background: #19345e;
+    padding:1rem;
+    color: #fff;
+    border-radius: .5rem;
+}
 
 
 
