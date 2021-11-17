@@ -8,6 +8,47 @@
 
 body{
     font-family: "Raleway", "Oswald";
+    background-color: #19345e;
 }
+
+.container{
+    background-color: azure;
+    margin:2.5rem auto;
+    height:90vh;
+    width:80%;
+    border-radius: .5rem;
+}
+
+/* fixed header  */
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+h1.logo{
+    color: #4e72a9;
+    padding: .3rem 2rem;
+}
+
+nav{
+    height: 2rem;
+    width: 100%;
+}
+
+
+/* content */
+/* main{
+    display: grid;
+    place-items: center; */
+    /* height:100vh */
+/* } */
+
+
+
+
+
+
+
 
 
