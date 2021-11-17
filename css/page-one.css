@@ -28,16 +28,17 @@ header{
     text-align: center;
     position: fixed;
     z-index: 1000; /*make sure the fixed is always on top of other elements*/
-    width: 100%;
+    width: 80%; /*would be 1005 if it not on the container which is on top of another element*/
 }
 
 h1.logo{
-    color: #4e72a9;
+    color: #19345e;
+    /* color: #4e72a9; */
     padding: .3rem 2rem;
 }
 
 nav{
-    height: 2rem;
+    /* height: 2rem; */
     width: 100%;
     position:absolute;
     text-align: left;
@@ -47,6 +48,8 @@ nav{
      */
     /* background: ;  width:100%; */
 
+    /* to toggle navigation hamburger  - with CSS */
+    display:none;
 }
 
 nav ul {
@@ -66,15 +69,49 @@ nav a:hover{
     color: #19345e;
 }
 
-/*  */
-/* nav-hamburger */
+/* to toggle navigation hamburger  - with CSS */
+.nav-hamburger:checked ~ nav{ /* Looks for a nav that is a sibling of element with .nav-hamburger class*/
+    /* make the navigation visible once the checkbox is checked */
+    display:block;
+    text-align: center; 
+}
+
+/* to place the toggle on the left */
+.nav-toggle-label{
+    position:absolute;
+    top: 0;
+    left: 0;
+    /* put a border to move it  */
+    /* border: 1px solid red; */
+    margin-left: 1rem;
+    /* place the toggle center on the left */
+    height: 100%;
+    display: flex;
+    align-items: center; /*after this, I can remove the border no*/
+}
+
+/* to make the 3 hamburgers
+* use span, psuedo ::before and ::after
+*/
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display:block;
+    background: #19345e;
+    height: .2rem;
+    width: 2em; /*one hamburger is formed*/
+    border-radius: .5rem;
+}
+
 
 /* content */
-/* main{
+main{
     display: grid;
-    place-items: center; */
+    place-items: center;
     /* height:100vh */
-/* } */
+    text-align: center;
+    padding-top: 15rem;
+} 
 
 
 
