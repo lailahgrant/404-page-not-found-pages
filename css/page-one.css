@@ -50,7 +50,14 @@ nav{
 
     /* to toggle navigation hamburger  - with CSS */
     /* display:none; */
-    /* comment the display above to add transitions */
+
+    /* comment the display above to add transitions,transform */
+    transform: scale(1,0); /*(width, height) :- (1,0) removes the nav, 1-width 100%, 0-height is 0%*/
+    /* transitions */
+    /* transition: 400ms ease-in-out; */ /*transitions starts from the middle*/
+    /* add transform-origin: top; to hve transition start at the top, humberger */
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
 }
 
 nav ul {
@@ -74,8 +81,11 @@ nav a:hover{
 /* to toggle navigation hamburger  - with CSS */
 .nav-hamburger:checked ~ nav{ /* Looks for a nav that is a sibling of element with .nav-hamburger class*/
     /* make the navigation visible once the checkbox is checked */
-    display:block;
-    text-align: center; 
+    /* display:block; */
+    /* text-align: center;   */
+    
+    /* display is commented to add transitions */
+    transform: scale(1,1); /*displays the nav on hamburger click*/
 }
 
 /* to hide the checkbox */
@@ -99,9 +109,6 @@ nav a:hover{
 }
 
 /* toggle on the hamburger */
-.nav-toggle{
-
-}
 
 /* to make the 3 hamburgers
 * use span, psuedo ::before and ::after
