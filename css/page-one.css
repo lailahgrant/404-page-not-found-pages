@@ -49,7 +49,8 @@ nav{
     /* background: ;  width:100%; */
 
     /* to toggle navigation hamburger  - with CSS */
-    display:none;
+    /* display:none; */
+    /* comment the display above to add transitions */
 }
 
 nav ul {
@@ -69,12 +70,19 @@ nav a:hover{
     color: #19345e;
 }
 
+
 /* to toggle navigation hamburger  - with CSS */
 .nav-hamburger:checked ~ nav{ /* Looks for a nav that is a sibling of element with .nav-hamburger class*/
     /* make the navigation visible once the checkbox is checked */
     display:block;
     text-align: center; 
 }
+
+/* to hide the checkbox */
+.nav-hamburger{
+    display:none;
+}
+
 
 /* to place the toggle on the left */
 .nav-toggle-label{
@@ -90,6 +98,11 @@ nav a:hover{
     align-items: center; /*after this, I can remove the border no*/
 }
 
+/* toggle on the hamburger */
+.nav-toggle{
+
+}
+
 /* to make the 3 hamburgers
 * use span, psuedo ::before and ::after
 */
@@ -101,7 +114,27 @@ nav a:hover{
     height: .2rem;
     width: 2em; /*one hamburger is formed*/
     border-radius: .5rem;
+    position: relative;
 }
+
+/* 2 hamburger bars are created */
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    content: "";
+    position: absolute;
+}
+
+/* each humber bar is placed */
+.nav-toggle-label span::before{
+    bottom: .5rem;
+}
+
+/* the other hamburger bar is also placed */
+.nav-toggle-label span::after{
+    top:.5rem;
+}
+
+
 
 
 /* content */

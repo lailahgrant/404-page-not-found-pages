@@ -197,8 +197,12 @@
 > Font Color
 > color : #4e72a9 ;  rgb(78,114,169)
 
-
-
+## Animations & Transitions
+> 4 properties 
+- Scale
+- Opacity
+- Translate
+- Rotate
 
 
 
