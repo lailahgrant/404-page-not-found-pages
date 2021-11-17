@@ -13,17 +13,22 @@ body{
 
 .container{
     background-color: azure;
-    margin:2.5rem auto;
+    margin:2rem auto;
     height:90vh;
     width:80%;
     border-radius: .5rem;
 }
 
+/* 
+* navigation styles
+* Responsive for small screens 1st 
+*/
 /* fixed header  */
 header{
+    text-align: center;
     position: fixed;
+    z-index: 1000; /*make sure the fixed is always on top of other elements*/
     width: 100%;
-    z-index: 1000;
 }
 
 h1.logo{
@@ -34,8 +39,35 @@ h1.logo{
 nav{
     height: 2rem;
     width: 100%;
+    position:absolute;
+    text-align: left;
+    top: 100%; /* lines up ul 100% down*/
+    /* for small screens
+    * if the nav was to have a dropdown and background-color  
+     */
+    /* background: ;  width:100%; */
+
 }
 
+nav ul {
+    /* margin:0; padding:0; */
+}
+
+nav li{ /* add spacing between each li*/
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+nav a{
+    /* font-size, color, text-decoration, text-transform */
+}
+
+nav a:hover{
+    color: #19345e;
+}
+
+/*  */
+/* nav-hamburger */
 
 /* content */
 /* main{
